@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update</h1>
+    <form action="updaterecord/{{task.id}}"method="post">
+    {% csrf_token %}
+    Task Title:<br>
+    <input type="title"value="{{task.taskTitle}}"><br><br>
+    Task Description:<br>
+    <textarea class="desc" value="{{task.taskDesc}}" cols="30" rows="10"></textarea><br><br>
+    Task Date:<br>
+    <input type="date"value="{{task.taskDate}}"><br><br>
+    <input type="submit"value="Submit">
+    </form>
+</body>
+</html>

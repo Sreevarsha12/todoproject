@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- <link rel="stylesheet" href="register.css" /> -->
+    <style>
+        input[type=text],input[type=password],input[type=email]{
+    width:550px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+
+  }
+    </style>
+</head>
+<body>
+   <form action="" method="post">
+    {% csrf_token %}
+  <b> Username</b><br>
+  <input type="text" name="username" ><br>
+  <b> First Name</b><br>
+  <input type="text" name="first_name" ><br>
+  <b> Last Name</b><br>
+  <input type="text" name="last_name" ><br>
+  <b> Email</b><br>
+  <input type="email" name="email" ><br>
+  <b> Password</b><br>
+  <input type="password" name="password" ><br>
+  <b> Confirm Password</b><br>
+  <input type="password" name="password1" ><br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+</body>
+</html>
